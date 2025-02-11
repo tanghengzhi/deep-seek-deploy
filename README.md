@@ -1,5 +1,19 @@
 # Deploy Deep Seek on Ubuntu 24.04
 
+## Prepare
+
+### Install Nvidia Drivers
+```bash
+ubuntu-drivers devices
+sudo apt install -y nvidia-driver-535
+sudo reboot
+```
+
+### Install Cuda
+```bash
+sudo apt install -y cuda
+```
+
 ## Ollama
 
 ### 1. Install Ollama
@@ -14,7 +28,7 @@ ollama run deepseek-r1:7b
 ```
 
 ### 3. REST API
-```sql
+```bash
 curl http://localhost:11434/api/generate -d '{
   "model": "deepseek-r1:7b",
   "prompt":"Why is the sky blue?"

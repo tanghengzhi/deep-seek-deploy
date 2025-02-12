@@ -4,14 +4,8 @@
 
 ### Install Nvidia Drivers
 ```bash
-ubuntu-drivers devices
-sudo apt install -y nvidia-driver-535
-sudo reboot
-```
-
-### Install Cuda
-```bash
-sudo apt install -y cuda
+sudo apt update
+sudo apt install nvidia-driver-535 nvidia-cuda-toolkit
 ```
 
 ## Ollama

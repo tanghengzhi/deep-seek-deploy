@@ -48,7 +48,13 @@ pip install vllm
 
 ### 4. Load and run the model
 ```bash
-vllm serve "ModelCloud/DeepSeek-R1-Distill-Qwen-7B-gptqmodel-4bit-vortex-v2"
+vllm serve ModelCloud/DeepSeek-R1-Distill-Qwen-7B-gptqmodel-4bit-vortex-v2 \
+    --quantization gptq \
+    --gpu-memory-utilization 0.9 \
+    --max-model-len 60000 \
+    --swap-space 10 \
+    --dtype float16 \
+    --api-key victor-tang-123
 ```
 
 ### 5. Call the server using curl

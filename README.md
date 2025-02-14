@@ -54,13 +54,14 @@ vllm serve ModelCloud/DeepSeek-R1-Distill-Qwen-7B-gptqmodel-4bit-vortex-v2 \
     --max-model-len 60000 \
     --swap-space 10 \
     --dtype float16 \
-    --api-key victor-tang-123
+    --api-key your-api-key
 ```
 
 ### 5. Call the server using curl
 ```bash
 curl -X POST "http://localhost:8000/v1/chat/completions" \
 	-H "Content-Type: application/json" \
+	-H "Authorization: Bearer your-api-key" \
 	--data '{
 		"model": "ModelCloud/DeepSeek-R1-Distill-Qwen-7B-gptqmodel-4bit-vortex-v2",
 		"messages": [
